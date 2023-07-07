@@ -1,0 +1,5 @@
+oy2notq423qixpfgcrtajiolxxls53vuzaai7y7i2xicuy
+
+dotnet ef migrations add MyFirstMigration
+
+dotnet ef database update
