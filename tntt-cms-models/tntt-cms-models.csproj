@@ -10,7 +10,7 @@
     <Authors>Tam Vu</Authors>
     <Company>TNTT</Company>
     <Description>The model of TNTT system</Description>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <AssemblyName>TNTT.CMS.Models</AssemblyName>
   </PropertyGroup>
 

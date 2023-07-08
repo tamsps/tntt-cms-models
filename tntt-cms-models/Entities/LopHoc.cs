@@ -13,7 +13,7 @@ namespace TNTT.CMS.Models.Entities
         public string? Nganh { get; set; }
         public string? NamHoc { get; set; }
         public string? GVCN { get; set; }
-        public ICollection<Profile> DanhSach { get; set; }
+        public ICollection<Users> DanhSach { get; set; }
 
     }
 }

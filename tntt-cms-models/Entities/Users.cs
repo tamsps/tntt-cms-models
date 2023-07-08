@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TNTT.CMS.Models.Entities
 {
-	public class Profile
+	public class Users
 	{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
