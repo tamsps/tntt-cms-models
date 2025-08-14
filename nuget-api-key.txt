@@ -1,5 +1,8 @@
-oy2notq423qixpfgcrtajiolxxls53vuzaai7y7i2xicuy
+oy2eq7tq3sdnwvet3znadh5ad2iy7tgenj4sck6dbcjm4q
 
 dotnet ef migrations add MyFirstMigration
 
 dotnet ef database update
+
+
+dotnet nuget push TNTT.CMS.Models.1.1.0.nupkg --api-key oy2eq7tq3sdnwvet3znadh5ad2iy7tgenj4sck6dbcjm4q --source https://api.nuget.org/v3/index.json
