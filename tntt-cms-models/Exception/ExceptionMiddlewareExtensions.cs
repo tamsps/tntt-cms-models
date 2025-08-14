@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace TNTT.CMS.Models.Exception
 {
+    //public static class ExceptionMiddlewareExtensions
     internal class ExceptionMiddlewareExtensions
     {
+
     }
 }

@@ -1,13 +1,26 @@
-﻿namespace TNTT.CMS.Models.Entities
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace TNTT.CMS.Models.Entities
 {
-    public class Role
-    {
-        public int Id { get; set; }
-        public string Ten { get; set; }
-        public int CanAccess { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public string? CreatedBy { get; set; }
-        public DateTime UpdatedDate { get; set; }
-        public string? UpdatedBy { get; set; }
-    }
+				
+    public class Role : BaseAuditableEntity
+		{
+			[Key]
+			[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+			public int Id { get; set; } // Đổi từ RoleId sang Id để nhất quán
+
+			[Required]
+			[StringLength(50)]
+			[Column(TypeName = "NVARCHAR(50)")]
+			public string RoleName { get; set; } = string.Empty;
+
+			[StringLength(500)]
+			[Column(TypeName = "NVARCHAR(500)")]
+			public string? Description { get; set; }
+
+			// Navigation property cho mối quan hệ many-to-many với Users và Permissions
+			public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+			public ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
+	}
 }

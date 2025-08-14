@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TNTT.CMS.Models.Entities
 {
-	public class MonHoc
-	{
+	public class MonHoc : BaseAuditableEntity
+		{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
@@ -14,10 +14,7 @@ namespace TNTT.CMS.Models.Entities
         public double Diem { get; set; }
         public int KetQuaHocTapId { get; set; }
         public string? GhiChu { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public string? CreatedBy { get; set; }
-        public DateTime UpdatedDate { get; set; }
-        public string? UpdatedBy { get; set; }
-    }
+		    public KetQuaHocTap KetQuaHocTap { get; set; } = null!;  // Navigation ngược
+	}
 }
 

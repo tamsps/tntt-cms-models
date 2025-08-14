@@ -4,17 +4,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TNTT.CMS.Models.Entities
 {
-	public class LopHoc
-	{
+      
+	public class ChiDoan : BaseAuditableEntity
+		{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public string? TenLop { get; set; }
-        public string? Nganh { get; set; }
+        public string? TenChiDoan { get; set; }
+        public int NganhId { get; set; }
+        public int PhanDoanId { get; set; }
         public string? NamHoc { get; set; }
         public string? GVCN { get; set; }
         public ICollection<Users> DanhSach { get; set; }
-
-    }
+		
+	}
 }
 

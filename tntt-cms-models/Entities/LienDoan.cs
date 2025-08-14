@@ -4,19 +4,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace TNTT.CMS.Models.Entities
 {
-	public class LienDoan
-	{
+	public class LienDoan : BaseAuditableEntity
+		{
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-        public int TongLienDoanId { get; set; }
+        public string TongLienDoanCode { get; set; }
         public string? TenLienDoan { get; set; }
-        public string? GiaoPhan { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public string? CreatedBy { get; set; }
-        public DateTime UpdatedDate { get; set; }
-        public string? UpdatedBy { get; set; }
-        public ICollection<HiepDoan>? HiepDoans { get; set; }
+        public string? LienDoanNumber { get; set; }
+	    	public string? GiaoPhan { get; set; }
+		public TongLienDoan? TongLienDoan { get; set; }
+		public ICollection<HiepDoan>? HiepDoans { get; set; }
 
     }
 }
