@@ -18,9 +18,10 @@ namespace TNTT.CMS.Models.Entities
 			[StringLength(500)]
 			[Column(TypeName = "NVARCHAR(500)")]
 			public string? Description { get; set; }
+			public string? RoleStatus { get; set; }
 
-			// Navigation property cho mối quan hệ many-to-many với Users và Permissions
-			public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+		// Navigation property cho mối quan hệ many-to-many với Users và Permissions
+		public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 			public ICollection<RolePermission> RolePermissions { get; set; } = new List<RolePermission>();
 	}
 }

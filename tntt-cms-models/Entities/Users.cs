@@ -41,6 +41,7 @@ namespace TNTT.CMS.Models.Entities
 
 		public DateTime? LastLoginDate { get; set; }
 		public int FailedLoginAttempts { get; set; } = 0;
+		public string UserStatus { get; set; } = "active"; // active, inactive, suspended, etc.
 
 
 		// Navigation properties cho many-to-many với Roles
