@@ -39,13 +39,16 @@ namespace TNTT.CMS.Models.Entities
 
 		public DateTime? PasswordResetExpires { get; set; } // Nullable DateTime '?' is inherently optional
 
+		//public DateTime LastFailedLogin { get; set; }
+
 		public DateTime? LastLoginDate { get; set; }
 		public int FailedLoginAttempts { get; set; } = 0;
 		public string UserStatus { get; set; } = "active"; // active, inactive, suspended, etc.
+		public string? Email { get; set; } 
+		public string? CCCD { get; set; } 
 
-
-		// Navigation properties cho many-to-many với Roles
-		public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+        // Navigation properties cho many-to-many với Roles
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 
 		// Navigation properties cho các model khác
 		public ICollection<Attendance> Attendances { get; set; } = new List<Attendance>();

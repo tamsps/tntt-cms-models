@@ -16,6 +16,7 @@ namespace TNTT.CMS.Models.Entities
         public string? NamHoc { get; set; }
         public string? GVCN { get; set; }
 		  public string? ChiDoanTruong_PIN { get; set; }
+		  public string? NgayHoc { get; set; } //T5, CN
 		public ICollection<Users> DanhSach { get; set; }
 		
 	}
